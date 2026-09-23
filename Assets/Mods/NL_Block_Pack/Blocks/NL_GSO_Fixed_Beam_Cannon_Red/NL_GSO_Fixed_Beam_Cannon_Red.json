@@ -317,7 +317,7 @@
                     "UnityEngine.TrailRenderer": { //Paint them trails
                         "material": {
                             "shader": "Legacy Shaders/Particles/Additive",
-                            "mainTexture": "NL_TEX_BEAM_RED_64x64_ALBEDO.png",
+                            "mainTexture": "NL_TEX_BEAM_CORAL_64x64_ALBEDO.png",
                             "shaderKeywords": [
                                 "_ALBEDO",
                                 "_EMISSION",
