@@ -1,0 +1,290 @@
+{
+	"NuterraBlock": {
+		"Name": "GSO Twin Beam Turret (Green)",
+		"Recipe": "62, 64",
+		"GamePrefabReference": "VEN_MGun_Medium_121",
+		"BlockExtents": {
+			"x": 1,
+			"y": 1,
+			"z": 1
+		},
+		"APs": [ // The location of APs on the block. For use with "Cells"
+			// Bottom
+			{
+				"x": 0,
+				"y": -0.5,
+				"z": 0
+			},
+			// Back
+			{
+				"x": 0,
+				"y": 0,
+				"z": -0.5
+			}
+		],
+		"SubObjects": [
+			{
+				"SubOverrideName": "m_Venture_Oozee_121_Base",
+				"MeshName": "NL_GSO_TWIN_PULSE_BEAM_TURRET_BASE_GREEN",
+				"MeshMaterialName": "GSO_Main",
+				"MakeBoxCollider": true,
+				"DestroySubReferenceRenderer": true,
+				"DestroyExistingColliders": true,
+				"SubPosition": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"SubRotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"SubScale": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			{
+				"SubOverrideName": "m_Venture_Oozee_121_RotatingBase",
+				"MeshName": "NL_GSO_TWIN_PULSE_BEAM_TURRET_RING",
+				"MeshMaterialName": "GSO_Main",
+				"MakeBoxCollider": false,
+				"DestroySubReferenceRenderer": true,
+				"DestroyExistingColliders": true,
+				"SubPosition": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"SubRotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"SubScale": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			{
+				"SubOverrideName": "m_Venture_Oozee_121_Gun",
+				"MeshName": "NL_GSO_TWIN_PULSE_BEAM_TURRET_TRUNNION",
+				"MeshMaterialName": "GSO_Main",
+				"MakeBoxCollider": false,
+				"DestroySubReferenceRenderer": true,
+				"DestroyExistingColliders": true,
+				"SubPosition": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"SubRotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"SubScale": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			}
+		],
+		"JSONBLOCK": {
+			"GameObject|_gimbalBase": {
+				"UnityEngine.Transform": {
+					"localEulerAngles": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localPosition": {
+						"x": 0,
+						"y": -0.2,
+						"z": -0.1
+					},
+					"localScale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				"GimbalAimer": {
+					"rotationLimits": [
+						-90,
+						90
+					]
+				},
+				"GameObject|_gimbalElev": {
+					"UnityEngine.Transform": {
+						"localEulerAngles": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"localPosition": {
+							"x": 0,
+							"y": 0,
+							"z": 0.1
+						},
+						"localScale": {
+							"x": 1,
+							"y": 1,
+							"z": 1
+						}
+					},
+					"GimbalAimer": {
+						"rotationLimits": [
+							-90,
+							10
+						]
+					},
+					"GameObject|_barrel1": {
+						"GameObject|_smoke": {
+							"UnityEngine.ParticleSystem": {
+								"maxParticles": 0
+							}
+						}
+					},
+					"GameObject|_barrel2": {
+						"GameObject|_smoke": {
+							"UnityEngine.ParticleSystem": {
+								"maxParticles": 0
+							}
+						}
+					},
+					"GameObject|_barrel3": null,
+					"GameObject|_barrel4": null
+				}
+			},
+			"Reference|VEN_Laser_Turret_111/FireData.": {
+				"m_MuzzleVelocity": 400,
+				"m_BulletSprayVariance": 0.1,
+				"m_BulletSpin": 0,
+				"m_KickbackStrength": 1,
+				"m_CasingVelocity": 0,
+				"m_CasingEjectVariance": 0,
+				"m_CasingEjectSpin": 0,
+				"Instantiate|m_BulletPrefab": {
+					"WeaponRound": {
+						"m_Damage": 20
+					},
+					"GameObject|Line": {
+						"UnityEngine.Transform": {
+							"localPosition": {
+								"x": 0,
+								"y": -0.15,
+								"z": 0.55
+							},
+							"localScale": {
+								"x": 1,
+								"y": 1,
+								"z": 1
+							}
+						},
+						"UnityEngine.LineRenderer": {
+							"material": {
+								"shader": "Legacy Shaders/Particles/Additive",
+								"mainTexture": "NL_TEX_BEAM_GREEN_64x64_ALBEDO.png",
+								"shaderKeywords": [
+									"_ALBEDO",
+									"_EMISSION",
+									"_NORMALMAP"
+								],
+								"mainTextureOffset": {
+									"x": 0,
+									"y": 0
+								},
+								"mainTextureScale": {
+									"x": 1,
+									"y": 1
+								},
+								"globalIlluminationFlags": 1,
+								"color": {
+									"r": 0.27,
+									"g": 1,
+									"b": 0.27,
+									"a": 1
+								}
+							},
+							"startColor": {
+								"r": 0.27,
+								"g": 1,
+								"b": 0.27,
+								"a": 1
+							},
+							"endColor": {
+								"r": 0.27,
+								"g": 1,
+								"b": 0.27,
+								"a": 1
+							},
+							"numCornerVertices": 2,
+							"numCapVertices": 8,
+							"startWidth": 1,
+							"endWidth": 1,
+							"widthMultiplier": 0.2
+						}
+					},
+					"LaserProjectile": {
+						"m_VelocityScaleFactor": 0.0125
+					}
+				}
+			},
+			"ModuleWeapon": {
+				"m_AimType": 0,
+				"m_RotateSpeed": 200,
+				"m_ChangeTargetInteval": 0.5,
+				"m_AutoFire": false,
+				"m_FiringEnergyRequired": 0,
+				"m_PreventShootingTowardsFloor": false,
+				"m_DeployOnHasTarget": false,
+				"m_LimitedShootAngle": 0,
+				"m_DontFireIfNotAimingAtTarget": false,
+				"m_ShotCooldown": 0,
+				"m_FireSFXType": 3 // "SoundEffectType" in Gun Template
+			},
+			"ModuleWeaponGun": {
+				"m_ShotCooldown": 0.05,
+				"m_CooldownVariancePct": 0, // "CooldownVariance" in Gun Template
+				"m_FireControlMode": 0, // 0 : Sequenced, 1 : AllAtOnce
+				"m_BurstShotCount": 20,
+				"m_BurstCooldown": 1.5,
+				"m_ResetBurstOnInterrupt": true,
+				"m_SeekingRounds": false,
+				"m_RegisterWarningAfter": 1,
+				"m_ResetFiringTAfterNotFiredFor": 1, // "ResetFiringTimeAfterNotFiredFor" in Gun Template
+				"m_HasSpinUpDownAnim": true,
+				"m_HasCooldownAnim": false,
+				"m_CanInterruptSpinUpAnim": false,
+				"m_CanInterruptSpinDownAnim": false,
+				"m_SpinUpAnimLayerIndex": 0,
+				"m_DeploySFXType": 0, // 0 is "Default"
+				"m_OverheatTime": 0,
+				"m_OverheatPauseWindow": 0,
+				"m_DisableMainAudioLoop": false,
+				"m_AudioLoopDelay": 0, // "DisableMainAudioLoop" in Gun Template
+				"m_FiringData": null
+			},
+			"ModuleCircuitNode": {
+				"ChargeInPoints": [
+					// Bottom
+					{
+						"x": 0,
+						"y": -0.5,
+						"z": 0
+					},
+					// Back
+					{
+						"x": 0,
+						"y": 0,
+						"z": -0.5
+					}
+				]
+			}
+		}
+	}
+}
