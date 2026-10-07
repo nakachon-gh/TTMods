@@ -1,68 +1,68 @@
 {
-    "Gun": {
-        // -- Gimbal settings (how the gun rotates) --
-        "LimitedShootAngle": 0,
-        "RotateSpeed": 0,
-        // GimbalBase refers to the yaw gimbal (rotating left and right)
-        // If min and max rotation are set to 0, the gimbal has unlimited movement and can loop around
-        "GimbalBaseMinRotation": 0,
-        "GimbalBaseMaxRotation": 0,
-        "GimbalBaseAimClampMaxPercent": 0,
-        "GimbalBaseXAngleAimOffset": 0,
-        // GimbalElev refers to the pitch gimbal (looking up and down)
-        "GimbalElevMinRotation": 0,
-        "GimbalElevMaxRotation": 0,
-        "GimbalElevAimClampMaxPercent": 0,
-        "GimbalElevXAngleAimOffset": 0,
-        // -- Firing --
-        // Valid options are "AutoAim" or "Default"
-        "AimType": "Default",
-        "ChangeTargetInterval": 0.5,
-        "AutoFire": false,
-        "PreventShootingTowardsFloor": false,
-        "DeployWhenHasTarget": false,
-        "DontFireIfNotAimingAtTarget": false,
-        "ShotCooldown": 2.5,
-        "CooldownVariance": 0,
-        // Valid options are "Sequenced" or "AllAtOnce"
-        "FireControlMode": "AllAtOnce",
-        "SeekingRounds": false,
-        "RegisterWarningAfter": 1,
-        "ResetFiringTimeAfterNotFiredFor": 1,
-        "OverheatTime": 0,
-        "OverheatPauseWindow": 0,
-        // See Appendix below for list of available options
-        "Bullet": "VEN_LaserBolt_Turret",
-        "Casing": null,
-        // Set count to 0 if you don't want any burst-fire effects
-        "BurstShotCount": 0,
-        "BurstCooldown": 0,
-        "ResetBurstOnInterrupt": true,
-        // -- Bullet settings --
-        "MuzzleVelocity": 400,
-        "BulletSprayVariance": 0.02,
-        "BulletSpin": 0,
-        "CasingVelocity": 5,
-        "CasingEjectVariance": 0.3,
-        "CasingEjectSpin": 50,
-        "KickbackStrength": 5,
-        // -- Anims and Effects --
-        "HasSpinUpDownAnim": false,
-        "HasCooldownAnim": false,
-        "CanInterruptSpinUp": false,
-        "CanInterruptSpinDown": false,
-        "SpinUpAnimLayerIndex": 0,
-        "MuzzleFlashSpeedFactor": 1,
-        "ShowParticlesOnAllQualitySettings": false,
-        // -- Sounds --
-        // See wiki for full list of sound effects
-        "SoundEffectType": "BFLaserScatter", // "VENMachineGunFixedForward",
-        "DeploySoundEffectType": "Default",
-        "DisableMainAudioLoop": false
-    },
     "NuterraBlock": {
+        "Name": "GSO Fixed Beam Cannon (Green)",
+        "Recipe": "62, 64",
+        "GamePrefabReference": "VEN_Laser_Turret_111",
+        "APs": [ // The location of APs on the block. For use with "Cells"
+            // Bottom
+            {
+                "x": 0,
+                "y": -0.5,
+                "z": 0
+            },
+            // Left
+            {
+                "x": -0.5,
+                "y": 0,
+                "z": 0
+            },
+            // Right
+            {
+                "x": 0.5,
+                "y": 0,
+                "z": 0
+            },
+            // Back
+            {
+                "x": 0,
+                "y": 0,
+                "z": -0.5
+            }
+        ],
+        "SubObjects": [
+            {
+                "SubOverrideName": "m_VEN_LaserTurret_111_Base",
+                "MeshName": "NL_GSO_FIXED_BEAM_CANNON_GREEN",
+                "MeshMaterialName": "GSO_Main",
+                "MakeBoxCollider": false,
+                "DestroySubReferenceRenderer": true,
+                "DestroyExistingColliders": true,
+                "SubPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "SubRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "SubScale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                }
+            }
+        ],
         "JSONBLOCK": {
             "FireData": {
+                "m_MuzzleVelocity": 400,
+                "m_BulletSprayVariance": 0.02,
+                "m_BulletSpin": 0,
+                "m_KickbackStrength": 1,
+                "m_CasingVelocity": 0,
+                "m_CasingEjectVariance": 0,
+                "m_CasingEjectSpin": 0,
                 "Instantiate|m_BulletPrefab": {
                     "WeaponRound": {
                         "m_Damage": 600
@@ -80,7 +80,7 @@
                                 "z": 0.1
                             }
                         },
-                        "UnityEngine.CapsuleCollider": { //Sozin found this one - Better collision detection
+                        "UnityEngine.CapsuleCollider": {
                             "radius": 0.15,
                             "center": {
                                 "x": 0,
@@ -314,7 +314,7 @@
                             }
                         }
                     },
-                    "UnityEngine.TrailRenderer": { //Paint them trails
+                    "UnityEngine.TrailRenderer": {
                         "material": {
                             "shader": "Legacy Shaders/Particles/Additive",
                             "mainTexture": "NL_TEX_BEAM_GREEN_64x64_ALBEDO.png",
@@ -334,7 +334,7 @@
                             "globalIlluminationFlags": 1,
                             "color": {
                                 "r": 0.9,
-                                "g": 1,
+                                "g": 1.0,
                                 "b": 0.9,
                                 "a": 0.75
                             }
@@ -369,13 +369,13 @@
                         "textureMode": 1,
                         "alignment": 0
                     },
-                    "Projectile": { //Another one (doot doooooot dododoot)
-                        "m_FlightSFXType": "DeliveryBomb",
+                    "Projectile": { // Another one (doot doooooot dododoot)
+                        // "m_FlightSFXType": "DeliveryBomb",
                         "m_DeathDelay": 0.36,
                         "m_SingleImpact": true, // The Bees are Relentless and will continuously deal damage while in the Enemy
                         "m_LifeTime": 1.5,
                         "m_IgnoreCollisionWithBarrel": true,
-                        "Instantiate|m_Explosion": { //Makes explosion unique, enters like "GameObject|m_Explosion"
+                        "Instantiate|m_Explosion": { // Makes explosion unique, enters like "GameObject|m_Explosion"
                             "UnityEngine.ParticleSystem": {
                                 "main": {
                                     "startLifetime": {
@@ -394,8 +394,8 @@
                                         "mode": 0,
                                         "color": {
                                             "r": 0.6,
-                                            "g": 0.6,
-                                            "b": 1,
+                                            "g": 1,
+                                            "b": 0.6,
                                             "a": 0
                                         }
                                     },
@@ -411,16 +411,16 @@
                                     "rateOverTime": 1
                                 }
                             },
-                            "Explosion": { //wOW a component
+                            "Explosion": { // wOW a component
                                 "m_DamageType": "Fire",
-                                "m_ExplosionSize": 1, //This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
-                                //"m_ExplosionType": "None", //What the explosion looks like
-                                "m_EffectRadius": 2, //Hopefully reasonable - to add some AP effect to the otherwise weak lasers
+                                "m_ExplosionSize": 1, // This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+                                // "m_ExplosionType": "None", // What the explosion looks like
+                                "m_EffectRadius": 2, // Hopefully reasonable - to add some AP effect to the otherwise weak lasers
                                 "m_EffectRadiusMaxStrength": 1.5,
-                                "m_MaxDamageStrength": 100, //This affects splash damage - Burn damage for the laser running through
-                                "m_MaxImpulseStrength": 50 //How hard to push things, explosion force
+                                "m_MaxDamageStrength": 100, // This affects splash damage - Burn damage for the laser running through
+                                "m_MaxImpulseStrength": 50 // How hard to push things, explosion force
                             },
-                            "GameObject|Point light": { //Does work
+                            "GameObject|Point light": {
                                 "UnityEngine.Transform": {
                                     "localPosition": {
                                         "x": 0,
@@ -504,9 +504,58 @@
                         }
                     },
                     "LaserProjectile": {
-                        "m_VelocityScaleFactor": 0.025
+                        "m_VelocityScaleFactor": 0.01
                     }
                 }
+            },
+            "ModuleWeapon": {
+                "m_AimType": 0,
+                "m_RotateSpeed": 0,
+                "m_ChangeTargetInteval": 0.5,
+                "m_AutoFire": false,
+                "m_FiringEnergyRequired": 0,
+                "m_PreventShootingTowardsFloor": false,
+                "m_DeployOnHasTarget": false,
+                "m_LimitedShootAngle": 0,
+                "m_DontFireIfNotAimingAtTarget": false,
+                "m_FireSFXType": 84 // "SoundEffectType" in Gun Template
+            },
+            "ModuleWeaponGun": {
+                "m_ShotCooldown": 2.5,
+                "m_CooldownVariancePct": 0.025, // "CooldownVariance" in Gun Template
+                "m_FireControlMode": 0, // 0 : Sequenced, 1 :AllAtOnce
+                "m_BurstShotCount": 0,
+                "m_BurstCooldown": 0,
+                "m_ResetBurstOnInterrupt": true,
+                "m_SeekingRounds": false,
+                "m_RegisterWarningAfter": 1,
+                "m_ResetFiringTAfterNotFiredFor": 1, // "ResetFiringTimeAfterNotFiredFor" in Gun Template
+                "m_HasSpinUpDownAnim": true,
+                "m_HasCooldownAnim": false,
+                "m_CanInterruptSpinUpAnim": false,
+                "m_CanInterruptSpinDownAnim": false,
+                "m_SpinUpAnimLayerIndex": 0,
+                "m_DeploySFXType": 0, // 0 is "Default" in Gun Template
+                "m_OverheatTime": 0,
+                "m_OverheatPauseWindow": 0,
+                "m_DisableMainAudioLoop": false,
+                "m_AudioLoopDelay": 0 // "DisableMainAudioLoop" in Gun Template
+            },
+            "ModuleCircuitNode": {
+                "ChargeInPoints": [
+                    // Bottom
+                    {
+                        "x": 0,
+                        "y": -0.5,
+                        "z": 0
+                    },
+                    // Back
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "z": -0.5
+                    }
+                ]
             }
         }
     }
