@@ -1,0 +1,489 @@
+{
+    "NuterraBlock": {
+        "Name": "GSO Homing Beam Cannon (Green)",
+        "Recipe": "62, 64",
+        "GamePrefabReference": "VEN_Laser_Turret_111",
+        // "KeepColliders": false,
+        // "KeepReferenceRenderers": false,
+        // "ReferenceOffset": {
+        //     "x": 0,
+        //     "y": 0,
+        //     "z": 0
+        // },
+        "APs": [ // The location of APs on the block. For use with "Cells"
+            // Bottom
+            {
+                "x": 0,
+                "y": -0.5,
+                "z": 0
+            },
+            // Back
+            {
+                "x": 0,
+                "y": 0,
+                "z": -0.5
+            }
+        ],
+        "SubObjects": [
+            {
+                "SubOverrideName": "m_VEN_LaserTurret_111_Base",
+                "MeshName": "NL_GSO_HOMING_BEAM_CANNON_GREEN",
+                "MeshMaterialName": "GSO_Main",
+                "MakeBoxCollider": false,
+                "DestroySubReferenceRenderer": true,
+                "DestroyExistingColliders": true,
+                "SubPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "SubRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "SubScale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                }
+            }
+        ],
+        "JSONBLOCK": {
+            "GameObject|_gimbalBase": {
+                "UnityEngine.Transform": {
+                    "localEulerAngles": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "localPosition": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0.25
+                    },
+                    "localScale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    }
+                },
+                "GimbalAimer": {
+                    "rotationLimits": [
+                        -0.0001,
+                        0.0001
+                    ]
+                },
+                "GameObject|_gimbalElev": {
+                    "GimbalAimer": {
+                        "rotationLimits": [
+                            -0.0001,
+                            0.0001
+                        ]
+                    },
+                    "UnityEngine.Transform": {
+                        "localEulerAngles": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "localPosition": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    "GameObject|_barrel": null,
+                    "Reference|HE_MiniGun_Large_525/m_HE_MiniGun_313_Base/_gimbalBase/m_HE_MiniGun_313_RotatingPart_A/_gimbalElev/_barrel": {
+                        "UnityEngine.Transform": {
+                            "localEulerAngles": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "localPosition": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "localScale": {
+                                "x": 1,
+                                "y": 1,
+                                "z": 1
+                            }
+                        },
+                        "GameObject|_smoke": {
+                            "UnityEngine.ParticleSystem": {
+                                "maxParticles": 0
+                            }
+                        },
+                        "GameObject|_spindle": {
+                            "GameObject|m_HE_MiniGun_Barrel": {
+                                "UnityEngine.Transform": {
+                                    "localPosition": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    }
+                                },
+                                "UnityEngine.MeshRenderer": null,
+                                "CapsuleCollider": null
+                            },
+                            "Spinner": { // Charge
+                                "m_Speed": 1,
+                                "m_SpinUpTime": 0, // How long until it fires
+                                "m_CurrentAngle": 0,
+                                "m_CurrentAutoSpeed": 0,
+                                "m_CurrentSpeedFraction": 0,
+                                "m_SpinnerSoundOriginalPitch": 1
+                            }
+                        },
+                        "GameObject|_muzzleFlash": {
+                            "UnityEngine.Transform": {
+                                "localEulerAngles": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "localPosition": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "localScale": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                }
+                            },
+                            "GameObject|_light": {
+                                "Light": {
+                                    "type": 2,
+                                    "spotAngle": 360,
+                                    "color": {
+                                        "r": 1,
+                                        "g": 0.2,
+                                        "b": 0.3,
+                                        "a": 1
+                                    }
+                                },
+                            }
+                        },
+                        "GameObject|_spawnBullet": {
+                            "UnityEngine.Transform": {
+                                "localPosition": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "localScale": {
+                                    "x": 1,
+                                    "y": 1,
+                                    "z": 1
+                                }
+                            }
+                        }
+                    },
+                    "Duplicate|_barrel": {
+                        "UnityEngine.Transform": {
+                            "localEulerAngles": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "localPosition": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "localScale": {
+                                "x": 1,
+                                "y": 1,
+                                "z": 1
+                            }
+                        }
+                    }
+                }
+            },
+            "Damageable": {
+                "m_DamageableType": 0,
+                "m_AoEDamageBlockPercent": 0.1
+            },
+            "Reference|HE_MiniGun_Large_525/ModuleWeapon.": {
+                "m_ShotCooldown": 0,
+                "m_FireSFXType": "BFLaserScatter",
+                "m_RotateSpeed": 150
+            },
+            "Reference|HE_CruiseMissile_121/ModuleWeaponGun.": {
+                "m_ShotCooldown": 0.05,
+                "m_ResetBurstOnInterrupt": false,
+                "m_CooldownVariancePct": 0,
+                "m_BurstShotCount": 4,
+                "m_BurstCooldown": 1.8,
+                "m_FiringData": null
+            },
+            "Reference|GSO_Cannon_Megaton_LongBarrel_424/FireData.": {
+                "m_MuzzleVelocity": 100,
+                "m_BulletSprayVariance": 0.2,
+                "m_BulletSpin": 0,
+                "m_KickbackStrength": 1,
+                "m_BulletCasingPrefab": null,
+                "Instantiate|m_BulletPrefab": {
+                    "UnityEngine.Transform": {
+                        "localEulerAngles": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "localPosition": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "localScale": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    "UnityEngine.Rigidbody": {
+                        "useGravity": false,
+                        "centerOfMass": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    "UnityEngine.MeshRenderer": null,
+                    "UnityEngine.CapsuleCollider": {
+                        "radius": 0.15,
+                        "center": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "height": 0.8,
+                        "direction": 2
+                    },
+                    "UnityEngine.TrailRenderer": {
+                        "material": {
+                            "shader": "Legacy Shaders/Particles/Alpha Blended Premultiply",
+                            "shaderKeywords": [
+                                "_ALBEDO",
+                                "_EMISSION",
+                                "_NORMALMAP"
+                            ],
+                            "mainTexture": "NL_TEX_BEAM_GREEN_64x64_ALBEDO.png",
+                            "mainTextureOffset": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "mainTextureScale": {
+                                "x": 1,
+                                "y": 1
+                            },
+                            "globalIlluminationFlags": 1
+                        },
+                        "receiveShadows": false,
+                        "shadowCastingMode": "Off",
+                        "rendererPriority": 1,
+                        "realtimeLightmapIndex": -1,
+                        "generateLightingData": false,
+                        "time": 0.36,
+                        "startWidth": 0.3,
+                        "endWidth": 0.2,
+                        "widthMultiplier": 1,
+                        "autodestruct": false,
+                        "emitting": true,
+                        "numCornerVertices": 2,
+                        "numCapVertices": 8,
+                        "minVertexDistance": 0.25,
+                        "startColor": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1,
+                            "a": 1
+                        },
+                        "endColor": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1,
+                            "a": 0
+                        },
+                        "shadowBias": 0,
+                        "textureMode": 0,
+                        "alignment": 0
+                    },
+                    "SmokeTrail": null,
+                    "UnityEngine.LineRenderer": null,
+                    "WeaponRound": {
+                        "m_DamageType": "Energy",
+                        "m_Damage": 75
+                    },
+                    "GameObject|_glow": {
+                        "UnityEngine.Light": {
+                            "cookieSize": 4,
+                            "spotAngle": 360,
+                            "color": {
+                                "r": 1,
+                                "g": 0.05,
+                                "b": 1,
+                                "a": 1
+                            },
+                            "colorTemperature": 6570,
+                            "intensity": 4,
+                            "bounceIntensity": 1,
+                            "shadowCustomResolution": -1,
+                            "shadowBias": 0.5,
+                            "shadowNormalBias": 1,
+                            "shadowNearPlane": 0.2,
+                            "renderMode": "Auto",
+                            "type": "point", // Auto, ForcePixel, ForceVertex
+                            "range": 3.5, // Spot, Directional, Point, Rectangle, Disc
+                            "flare": null
+                        }
+                    },
+                    "Projectile": {
+                        "m_LifeTime": 5,
+                        "m_DeathDelay": 0.1,
+                        "m_ExplodeAfterLifetime": false,
+                        "m_ExplodeOnTerrain": true,
+                        "m_IgnoreCollisionWithBarrel": true,
+                        "m_StickOnContact": false,
+                        "m_ExplodeOnStick": false,
+                        "m_HideProjectileOnStick": false,
+                        "m_SingleImpact": true,
+                        "m_CanHaveGravity": false,
+                        "m_ImpactSFXType": "Laser",
+                        "Instantiate|m_Explosion": {
+                            "Explosion": {
+                                "m_DamageType": "Energy",
+                                // "m_ExplosionSize": 0, // This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+                                // "m_ExplosionType": "Fuel", // What the explosion looks like
+                                "m_EffectRadius": 2,
+                                "m_EffectRadiusMaxStrength": 1.5,
+                                "m_MaxDamageStrength": 20, // This affects splash damage
+                                "m_MaxImpulseStrength": 15 // How hard to push things, explosion force -YEET
+                            },
+                            "GameObject|Point light": {
+                                "UnityEngine.Transform": {
+                                    "localPosition": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "z": 0
+                                    },
+                                    "localScale": {
+                                        "x": 1,
+                                        "y": 1,
+                                        "z": 1
+                                    }
+                                },
+                                "UnityEngine.Light": {
+                                    "cookieSize": 4,
+                                    "spotAngle": 360,
+                                    "color": {
+                                        "r": 1,
+                                        "g": 0.1,
+                                        "b": 0,
+                                        "a": 1
+                                    },
+                                    "colorTemperature": 6570,
+                                    "intensity": 150,
+                                    "bounceIntensity": 1,
+                                    "shadowCustomResolution": -1,
+                                    "shadowBias": 0.5,
+                                    "shadowNormalBias": 1,
+                                    "shadowNearPlane": 0.2,
+                                    "renderMode": "Auto",
+                                    "type": "point", // Auto, ForcePixel, ForceVertex
+                                    "range": 1.75, // Spot, Directional, Point, Rectangle, Disc
+                                    "flare": null
+                                },
+                                "FadeInOutLight": {
+                                    "StartDelay": 0,
+                                    "FadeInSpeed": 0.05,
+                                    "FadeOutDelay": 0.1,
+                                    "FadeOutSpeed": 0.5,
+                                    "FadeOutAfterCollision": false,
+                                    "UseHideStatus": false
+                                }
+                            },
+                            "Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Fire": {
+                                "UnityEngine.ParticleSystem": {
+                                    "main": {
+                                        "duration": 2,
+                                        "startSize": {
+                                            "mode": 0,
+                                            "constant": 4
+                                        },
+                                        "startSpeed": {
+                                            "mode": 0,
+                                            "constant": 0
+                                        },
+                                        "startColor": {
+                                            "mode": 0,
+                                            "color": {
+                                                "r": 1,
+                                                "g": 0.1,
+                                                "b": 0,
+                                                "a": 1
+                                            }
+                                        },
+                                        "simulationSpeed": 0.45
+                                    }
+                                }
+                            },
+                            "GameObject|Sparks": {
+                                "UnityEngine.ParticleSystem": {
+                                    "main": {
+                                        "startColor": {
+                                            "mode": 0,
+                                            "color": {
+                                                "r": 1,
+                                                "g": 1,
+                                                "b": 1,
+                                                "a": 0
+                                            }
+                                        },
+                                        "simulationSpace": 0,
+                                        "simulationSpeed": 1,
+                                        "maxParticles": 1
+                                    }
+                                }
+                            },
+                            "GameObject|ExplosionBright": null,
+                            "GameObject|ExplosionDark": null,
+                            "GameObject|ExplosionSmoke": null
+                        }
+                    },
+                    "SeekingProjectile": {
+                        "m_TargetingType": "BestAimCabOrCentre", // Where we head to when locked onto a target. 0 : CenterOfMass, 1 : BestAimCabOrCentre, 2 : RandomBlockOnVehicle
+                        "m_ApplyRotationTowardsTarget": true, // Will it visually point at the target?
+                        "m_UpdateVisibleInterval": 0.1,
+                        "m_ActivationDelay": 0, // How long before we aim at the target?
+                        "m_VisionRange": 300, // How far can we see targets?
+                        "m_VisionConeAngle": 360, // How wide can we see targets?
+                        "m_TurnSpeed": 300 // How strong the turn is towards the enemy
+                    },
+                    "SeekingProjectileIgnoreLock": {}
+                }
+            },
+            "ModuleCircuitNode": {
+                "ChargeInPoints": [
+                    // Bottom
+                    {
+                        "x": 0,
+                        "y": -0.5,
+                        "z": 0
+                    },
+                    // Back
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "z": -0.5
+                    }
+                ]
+            }
+        }
+    }
+}
