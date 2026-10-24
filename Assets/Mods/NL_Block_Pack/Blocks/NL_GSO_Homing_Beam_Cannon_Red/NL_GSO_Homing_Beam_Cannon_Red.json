@@ -456,6 +456,8 @@
                             "GameObject|ExplosionSmoke": null
                         }
                     },
+                    "TrailProjectile": {                        
+                    },
                     "SeekingProjectile": {
                         "m_TargetingType": "BestAimCabOrCentre", // Where we head to when locked onto a target. 0 : CenterOfMass, 1 : BestAimCabOrCentre, 2 : RandomBlockOnVehicle
                         "m_ApplyRotationTowardsTarget": true, // Will it visually point at the target?
