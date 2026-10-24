@@ -1,0 +1,98 @@
+{
+    "NuterraBlock": {
+        "Name": "GSO Custom Beam Rifle Body",
+        "Recipe": "5, 5, 5, 5, 5, 5, 5, 5, 56",
+        "GamePrefabReference": "HE_Battery_211",
+        "KeepReferenceRenderers": true,
+        "BlockExtents": {
+            "x": 1,
+            "y": 1,
+            "z": 2
+        },
+        "APs": [ // The location of APs on the block. For use with "Cells"
+            // Top
+            {
+                "x": 0,
+                "y": 0.5,
+                "z": 0
+            },
+            {
+                "x": 0,
+                "y": 0.5,
+                "z": 1
+            },
+            // Bottom
+            {
+                "x": 0,
+                "y": -0.5,
+                "z": 0
+            },
+            {
+                "x": 0,
+                "y": -0.5,
+                "z": 1
+            },
+            // Back
+            {
+                "x": 0,
+                "y": 0,
+                "z": -0.5
+            },
+            // Front
+            {
+                "x": 0,
+                "y": 0,
+                "z": 1.5
+            }
+        ],
+        "SubObjects": [
+            {
+                "SubOverrideName": "m_HE_Battery_211_Base",
+                "MeshName": "NL_GSO_CUSTOM_BEAM_RIFLE_BODY",
+                "MeshMaterialName": "GSO_Main",
+                "MakeBoxCollider": true,
+                "DestroySubReferenceRenderer": true,
+                "DestroyExistingColliders": true,
+                "SubPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "SubRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "SubScale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                }
+            }
+        ],
+        "JSONBLOCK": {
+            "GameObject|m_HE_Battery_211_LEDs": {
+                "UnityEngine.Transform": {
+                    "localEulerAngles": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 90
+                    },
+                    "localPosition": {
+                        "x": 0,
+                        "y": -0.4,
+                        "z": 1.1
+                    },
+                    "localScale": {
+                        "x": 0.15,
+                        "y": 0.6125,
+                        "z": 0.5
+                    }
+                }
+            },
+            "ModuleEnergyStore": {
+                "m_Capacity": 1500
+            }
+        }
+    }
+}
