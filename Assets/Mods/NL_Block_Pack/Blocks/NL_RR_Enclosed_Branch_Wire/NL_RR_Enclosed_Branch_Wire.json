@@ -1,0 +1,148 @@
+{
+    "NuterraBlock": {
+        "Name": "RR Enclosed Branch Wire",
+        "Recipe": "3, 3, 5, 7, 56",
+        "GamePrefabReference": "EXP_Circuits_Wire_OneWay_111",
+        "KeepReferenceRenderers": false,
+        "BlockExtents": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+        },
+        "APs": [ // The location of APs on the block. For use with "Cells"
+            // Top
+            {
+                "x": 0,
+                "y": 0.5,
+                "z": 0
+            },
+            // Bottom
+            {
+                "x": 0,
+                "y": -0.5,
+                "z": 0
+            },
+            // Left
+            {
+                "x": -0.5,
+                "y": 0,
+                "z": 0
+            },
+            // Right
+            {
+                "x": 0.5,
+                "y": 0,
+                "z": 0
+            },
+            // Front
+            {
+                "x": 0,
+                "y": 0,
+                "z": 0.5
+            },
+            // Back
+            {
+                "x": 0,
+                "y": 0,
+                "z": -0.5
+            }
+        ],
+        "SubObjects": [
+            {
+                "SubOverrideName": "m_RR_Circuits_Wire_OneWay_111_Base",
+                "MeshName": "NL_RR_ENCLOSED_BRANCH_WIRE",
+                "MeshMaterialName": "RR_Main",
+                "MakeBoxCollider": true,
+                "DestroySubReferenceRenderer": true,
+                "DestroyExistingColliders": true,
+                "SubPosition": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "SubRotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "SubScale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                }
+            }
+        ],
+        "JSONBLOCK": {
+            "GameObject|m_RR_Circuits_Wire_OneWay_111_Base": {
+                // Back - Left
+                "Reference|EXP_Circuits_Signal_Delay_111/m_RR_Circuits_Signal_Delay_111_Base/m_RR_Circuits_Signal_Delay_111_inIndicator": {
+                    "UnityEngine.Transform": {
+                        "localEulerAngles": {
+                            "x": 0,
+                            "y": 45,
+                            "z": 90
+                        },
+                        "localPosition": {
+                            "x": 0.2825,
+                            "y": 0,
+                            "z": 0.0875
+                        },
+                        "localScale": {
+                            "x": 0.75,
+                            "y": 1,
+                            "z": 0.75
+                        }
+                    }
+                },
+                // Back - Right
+                "Duplicate_Duplicate|m_RR_Circuits_Signal_Delay_111_inIndicator": {
+                    "UnityEngine.Transform": {
+                        "localEulerAngles": {
+                            "x": 0,
+                            "y": -45,
+                            "z": -90
+                        },
+                        "localPosition": {
+                            "x": -0.2825,
+                            "y": 0,
+                            "z": 0.0875
+                        },
+                        "localScale": {
+                            "x": 0.75,
+                            "y": 1,
+                            "z": 0.75
+                        }
+                    }
+                }
+            },
+            "ModuleCircuitNode": {
+                "ChargeInPoints": [
+                    // Back
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "z": -0.5
+                    }
+                ],
+                "ChargeOutPoints": [
+                    // Top
+                    {
+                        "x": 0,
+                        "y": 0.5,
+                        "z": 0
+                    },
+                    // Front
+                    {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0.5
+                    }
+                ]
+            },
+            "ModuleCircuit_Display_Color": {
+                "m_DisplayType": -1, // To avoid game crush.
+                "enabled": false
+            }
+        }
+    }
+}
