@@ -505,6 +505,8 @@
                     },
                     "LaserProjectile": {
                         "m_VelocityScaleFactor": 0.01
+                    },
+                    "TrailProjectile": {                        
                     }
                 }
             },
