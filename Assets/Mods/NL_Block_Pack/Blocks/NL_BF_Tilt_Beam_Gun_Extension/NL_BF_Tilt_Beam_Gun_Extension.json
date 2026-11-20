@@ -1,0 +1,513 @@
+{
+	"NuterraBlock": {
+		"Name": "BF Tilt Beam Gun Extension",
+		"Recipe": "50, 51, 62, 64",
+		"GamePrefabReference": "VEN_MGun_Medium_121",
+		"ReferenceOffset": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"Cells": [
+			{
+				"x": 0,
+				"y": 0,
+				"z": 1
+			},
+			{
+				"x": 0,
+				"y": 0,
+				"z": 2
+			}
+		],
+		"APs": [
+			// Back
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0.5
+			}
+		],
+		"SubObjects": [
+			{
+				"SubOverrideName": "m_Venture_Oozee_121_Gun",
+				"MeshName": "NL_BF_TILT_BEAM_GUN_EXTENSION",
+				"MeshMaterialName": "BF_Main",
+				"MakeBoxCollider": false,
+				"DestroySubReferenceRenderer": true,
+				"DestroyExistingColliders": true,
+				"SubPosition": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"SubRotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"SubScale": {
+					"x": 1,
+					"y": 1,
+					"z": 1
+				}
+			},
+			{
+				"SubOverrideName": "_gimbalBase/_gimbalElev/m_HE_Block_111",
+				"DestroyExistingRenderer": true,
+				"MakeBoxCollider": true
+			},
+			{
+				"SubOverrideName": "_gimbalBase/_gimbalElev/m_HE_Block_111_copy",
+				"DestroyExistingRenderer": true,
+				"MakeBoxCollider": true
+			},
+			{
+				"SubOverrideName": "_gimbalBase/_gimbalElev/m_HE_Block_111_copy_2",
+				"DestroyExistingRenderer": true,
+				"MakeBoxCollider": true
+			},
+			{
+				"SubOverrideName": "_gimbalBase/_gimbalElev/m_HE_Block_111_copy_3",
+				"DestroyExistingRenderer": true,
+				"MakeBoxCollider": true
+			}
+		],
+		"JSONBLOCK": {
+			"GameObject|_gimbalBase": {
+				"UnityEngine.Transform": {
+					"localEulerAngles": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localPosition": {
+						"x": 0,
+						"y": 0,
+						"z": 0
+					},
+					"localScale": {
+						"x": 1,
+						"y": 1,
+						"z": 1
+					}
+				},
+				"GimbalAimer": null,
+				"GameObject|_gimbalElev": {
+					"UnityEngine.Transform": {
+						"localEulerAngles": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"localPosition": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"localScale": {
+							"x": 1,
+							"y": 1,
+							"z": 1
+						}
+					},
+					"GimbalAimer": {
+						"rotationLimits": [
+							-40,
+							40
+						]
+					},
+					"GameObject|_barrel1": {
+						"UnityEngine.Transform": {
+							"localEulerAngles": {
+								"x": 0,
+								"y": 0,
+								"z": 0
+							},
+							"localPosition": {
+								"x": 0,
+								"y": 0,
+								"z": 2.6
+							},
+							"localScale": {
+								"x": 1,
+								"y": 1,
+								"z": 1
+							}
+						},
+						"GameObject|_smoke": {
+							"UnityEngine.ParticleSystem": {
+								"maxParticles": 0
+							}
+						},
+						"CannonBarrel": {
+							"recoiler": null
+						}
+					},
+					"GameObject|_barrel2": null,
+					"GameObject|_barrel3": null,
+					"GameObject|_barrel4": null,
+					"Reference|HE_Block_111/m_HE_Block_111": {
+						"UnityEngine.Transform": {
+							"localEulerAngles": {
+								"x": 0,
+								"y": 0,
+								"z": 0
+							},
+							"localPosition": {
+								"x": 0.1875,
+								"y": 0,
+								"z": 1.05
+							},
+							"localScale": {
+								"x": 0.025,
+								"y": 0.4,
+								"z": 2.85
+							}
+						}
+					},
+					"Duplicate|m_HE_Block_111": {
+						"UnityEngine.Transform": {
+							"localEulerAngles": {
+								"x": 0,
+								"y": 0,
+								"z": 0
+							},
+							"localPosition": {
+								"x": -0.1875,
+								"y": 0,
+								"z": 1.05
+							},
+							"localScale": {
+								"x": 0.025,
+								"y": 0.4,
+								"z": 2.85
+							}
+						}
+					},
+					"Duplicate2|m_HE_Block_111": {
+						"UnityEngine.Transform": {
+							"localEulerAngles": {
+								"x": 0,
+								"y": 0,
+								"z": 0
+							},
+							"localPosition": {
+								"x": 0,
+								"y": 0.1875,
+								"z": 1.05
+							},
+							"localScale": {
+								"x": 0.35,
+								"y": 0.025,
+								"z": 2.85
+							}
+						}
+					},
+					"Duplicate3|m_HE_Block_111": {
+						"UnityEngine.Transform": {
+							"localEulerAngles": {
+								"x": 0,
+								"y": 0,
+								"z": 0
+							},
+							"localPosition": {
+								"x": 0,
+								"y": -0.1875,
+								"z": 1.05
+							},
+							"localScale": {
+								"x": 0.35,
+								"y": 0.025,
+								"z": 2.85
+							}
+						}
+					}
+				}
+			},
+			"Damageable": {
+				"m_DamageableType": 0,
+				"m_AoEDamageBlockPercent": 0.1
+			},
+			"ModuleDamage": {
+				"m_DamageDetachFragility": 1
+			},
+			"ModuleWeapon": {
+				"m_ShotCooldown": 2,
+				"m_FireSFXType": "GSORepuslor",
+				"m_RotateSpeed": 100
+			},
+			"Reference|HE_CruiseMissile_121/ModuleWeaponGun.": {
+				"m_ShotCooldown": 2,
+				"m_CooldownVariancePct": 0,
+				"m_BurstShotCount": 0,
+				"m_BurstCooldown": 0,
+				"m_ResetBurstOnInterrupt": false,
+				"m_FiringData": null
+			},
+			"Reference|GSO_Cannon_Megaton_LongBarrel_424/FireData.": {
+				"m_MuzzleVelocity": 600,
+				"m_BulletSprayVariance": 0,
+				"m_BulletSpin": 0,
+				"m_KickbackStrength": 1,
+				"m_BulletCasingPrefab": null,
+				"Instantiate|m_BulletPrefab": {
+					"UnityEngine.Transform": {
+						"localEulerAngles": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"localPosition": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						"localScale": {
+							"x": 1,
+							"y": 1,
+							"z": 1
+						}
+					},
+					"UnityEngine.Rigidbody": {
+						"useGravity": false,
+						"centerOfMass": {
+							"x": 0,
+							"y": 0,
+							"z": 0
+						}
+					},
+					"UnityEngine.MeshRenderer": null,
+					"UnityEngine.CapsuleCollider": {
+						"radius": 0.1,
+						"center": {
+							"x": 0,
+							"y": 0,
+							"z": 5
+						},
+						"height": 10,
+						"direction": 2
+					},
+					"UnityEngine.TrailRenderer": {
+						"material": {
+							"shader": "Legacy Shaders/Particles/Additive",
+							"mainTexture": "NL_TEX_BEAM_BLUE_BLACK_64x64_ALBEDO.png",
+							"shaderKeywords": [
+								"_ALBEDO",
+								"_EMISSION",
+								"_NORMALMAP"
+							],
+							"mainTextureOffset": {
+								"x": 0,
+								"y": 0
+							},
+							"mainTextureScale": {
+								"x": 1,
+								"y": 1
+							},
+							"globalIlluminationFlags": 1,
+							"color": {
+								"r": 0.9,
+								"g": 0.9,
+								"b": 1,
+								"a": 0.75
+							}
+						},
+						"receiveShadows": false,
+						"shadowCastingMode": "Off",
+						"rendererPriority": -1,
+						"realtimeLightmapIndex": -1,
+						"generateLightingData": false,
+						"time": 0.36,
+						"startWidth": 0.75,
+						"endWidth": 0.75,
+						"widthMultiplier": 1,
+						"autodestruct": false,
+						"emitting": true,
+						"numCornerVertices": 2,
+						"numCapVertices": 8,
+						"minVertexDistance": 0.5,
+						"startColor": {
+							"r": 1,
+							"g": 1,
+							"b": 1,
+							"a": 1
+						},
+						"endColor": {
+							"r": 1,
+							"g": 1,
+							"b": 1,
+							"a": 0
+						},
+						"shadowBias": 0,
+						"textureMode": 1,
+						"alignment": 0
+					},
+					"SmokeTrail": null,
+					"UnityEngine.LineRenderer": null,
+					"WeaponRound": {
+						"m_DamageType": "Energy",
+						"m_Damage": 500
+					},
+					"GameObject|_glow": {
+						"UnityEngine.Light": {
+							"cookieSize": 4,
+							"spotAngle": 360,
+							"color": {
+								"r": 1,
+								"g": 0.05,
+								"b": 1,
+								"a": 1
+							},
+							"colorTemperature": 6570,
+							"intensity": 4,
+							"bounceIntensity": 1,
+							"shadowCustomResolution": -1,
+							"shadowBias": 0.5,
+							"shadowNormalBias": 1,
+							"shadowNearPlane": 0.2,
+							"renderMode": "Auto",
+							"type": "point", // Auto, ForcePixel, ForceVertex
+							"range": 3.5, // Spot, Directional, Point, Rectangle, Disc
+							"flare": null
+						}
+					},
+					"Projectile": {
+						"m_LifeTime": 2,
+						"m_DeathDelay": 0.1,
+						"m_ExplodeAfterLifetime": false,
+						"m_ExplodeOnTerrain": true,
+						"m_IgnoreCollisionWithBarrel": true,
+						"m_StickOnContact": false,
+						"m_ExplodeOnStick": false,
+						"m_HideProjectileOnStick": false,
+						"m_SingleImpact": true,
+						"m_CanHaveGravity": false,
+						"m_ImpactSFXType": "Laser",
+						"Instantiate|m_Explosion": {
+							"Explosion": {
+								"m_EffectRadius": 2, // Hopefully reasonable - to add some AP effect to the otherwise weak lasers
+								"m_EffectRadiusMaxStrength": 1.5,
+								"m_MaxDamageStrength": 100, // This affects splash damage - Burn damage for the laser running through
+								"m_MaxImpulseStrength": 50, // How hard to push things, explosion force
+								"m_DamageType": "Fire",
+								"m_ExplosionSize": 1, // This is an enum with values 0 1 and 2 for SFX (Not actual size! that would be RAIDUS)
+								// "m_ExplosionType": "None", // What the explosion looks like
+								"m_Once": true
+							},
+							"GameObject|Point light": {
+								"UnityEngine.Transform": {
+									"localPosition": {
+										"x": 0,
+										"y": 0,
+										"z": 0
+									},
+									"localScale": {
+										"x": 1,
+										"y": 1,
+										"z": 1
+									}
+								},
+								"UnityEngine.Light": {
+									"cookieSize": 4,
+									"spotAngle": 360,
+									"color": {
+										"r": 1,
+										"g": 0.1,
+										"b": 0,
+										"a": 1
+									},
+									"colorTemperature": 6570,
+									"intensity": 150,
+									"bounceIntensity": 1,
+									"shadowCustomResolution": -1,
+									"shadowBias": 0.5,
+									"shadowNormalBias": 1,
+									"shadowNearPlane": 0.2,
+									"renderMode": "Auto",
+									"type": "point", // Auto, ForcePixel, ForceVertex
+									"range": 1.75, // Spot, Directional, Point, Rectangle, Disc
+									"flare": null
+								},
+								"FadeInOutLight": {
+									"StartDelay": 0,
+									"FadeInSpeed": 0.05,
+									"FadeOutDelay": 0.1,
+									"FadeOutSpeed": 0.5,
+									"FadeOutAfterCollision": false,
+									"UseHideStatus": false
+								}
+							},
+							"Reference|VEN_Cab_111.ModuleDamage.deathExplosion/FX_Explosion_Fire": {
+								"UnityEngine.ParticleSystem": {
+									"main": {
+										"duration": 2,
+										"startSize": {
+											"mode": 0,
+											"constant": 4
+										},
+										"startSpeed": {
+											"mode": 0,
+											"constant": 0
+										},
+										"startColor": {
+											"mode": 0,
+											"color": {
+												"r": 1,
+												"g": 0.1,
+												"b": 0,
+												"a": 1
+											}
+										},
+										"simulationSpeed": 0.45
+									}
+								}
+							},
+							"GameObject|Sparks": {
+								"UnityEngine.ParticleSystem": {
+									"main": {
+										"startColor": {
+											"mode": 0,
+											"color": {
+												"r": 1,
+												"g": 1,
+												"b": 1,
+												"a": 0
+											}
+										},
+										"simulationSpace": 0,
+										"simulationSpeed": 1,
+										"maxParticles": 1
+									}
+								}
+							},
+							"GameObject|ExplosionBright": null,
+							"GameObject|ExplosionDark": null,
+							"GameObject|ExplosionSmoke": null
+						}
+					},
+					"TrailProjectile": {},
+					"SeekingProjectile": {
+						"m_TargetingType": "RandomBlockOnVehicle", // Where we head to when locked onto a target. 0 : CenterOfMass, 1 : BestAimCabOrCentre, 2 : RandomBlockOnVehicle
+						"m_ApplyRotationTowardsTarget": true, // Will it visually point at the target?
+						"m_UpdateVisibleInterval": 0.1,
+						"m_ActivationDelay": 0, // How long before we aim at the target?
+						"m_VisionRange": 300, // How far can we see targets?
+						"m_VisionConeAngle": 180, // How wide can we see targets?
+						"m_TurnSpeed": 10 // How strong the turn is towards the enemy
+					}
+				}
+			},
+			"ModuleCircuitNode": {
+				"ChargeInPoints": [
+					// Back
+					{
+						"x": 0,
+						"y": 0,
+						"z": 0.5
+					}
+				]
+			}
+		}
+	}
+}
