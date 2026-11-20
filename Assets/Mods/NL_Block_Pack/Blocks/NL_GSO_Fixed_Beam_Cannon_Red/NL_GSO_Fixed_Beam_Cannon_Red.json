@@ -55,6 +55,25 @@
             }
         ],
         "JSONBLOCK": {
+            "GameObject|_gimbalBase/_gimbalElev/_barrel": {
+                "UnityEngine.Transform": {
+                    "localEulerAngles": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "localPosition": {
+                        "x": 0,
+                        "y": -0.2,
+                        "z": 0
+                    },
+                    "localScale": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    }
+                }
+            },
             "FireData": {
                 "m_MuzzleVelocity": 400,
                 "m_BulletSprayVariance": 0.02,
@@ -198,7 +217,7 @@
                                     "z": 0
                                 },
                                 "rotation": {
-                                    "x": 45,
+                                    "x": 0,
                                     "y": 0,
                                     "z": 0
                                 },
@@ -274,6 +293,15 @@
                                     }
                                 }
                             },
+                            "inheritVelocity": {
+                                "enabled": true,
+                                "curve": {
+                                    "mode": 0,
+                                    "constant": 0
+                                },
+                                "curveMultiplier": -0.01,
+                                "mode": 1 // 0 : Initial, 1 : Current
+                            },
                             "limitVelocityOverLifetime": {
                                 "enabled": true,
                                 "separateAxes": false,
@@ -303,14 +331,23 @@
                                 "multiplyDragByParticleSize": true,
                                 "multiplyDragByParticleVelocity": true
                             },
-                            "inheritVelocity": {
+                            "velocityOverLifetime": {
                                 "enabled": true,
-                                "curve": {
+                                "x": {
                                     "mode": 0,
-                                    "constant": 0
+                                    "constant": 0.5
                                 },
-                                "curveMultiplier": -0.01,
-                                "mode": 1 // 0 : Initial, 1 : Current
+                                "y": {
+                                    "mode": 0,
+                                    "constant": 0.0
+                                },
+                                "z": {
+                                    "mode": 0,
+                                    "constant": 0.0
+                                },
+                                "xMultiplier": 1.0,
+                                "yMultiplier": 1.0,
+                                "zMultiplier": 1.0
                             }
                         }
                     },
@@ -506,8 +543,7 @@
                     "LaserProjectile": {
                         "m_VelocityScaleFactor": 0.01
                     },
-                    "TrailProjectile": {                        
-                    }
+                    "TrailProjectile": {}
                 }
             },
             "ModuleWeapon": {
